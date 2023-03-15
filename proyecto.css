@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Righteous', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 1px 0 #7A7A7A;
+
+}
+
+body {
+    background-color: green;
+    padding: 2%;
+    margin: 0;
+    font-family: 'Righteous', cursive;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 4em;
+}
+
+.court {
+    border: solid 80px #00933A;
+    width: 100%;
+    height: 45em;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    border-radius: 5%;
+}
+
+.grid,
+.grid1 {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    border: solid 3px white;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    box-shadow: 0px 0px 15px 5px #FFFFFF;
+    
+}
+/* .grid{
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+.grid1{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+} */
+
+.a1 {
+    grid-column: 1/ 14;
+    grid-row: 1 / 4;
+  
+}
+
+.a2 {
+    grid-column: 1 / 14;
+    grid-row: 1 / 4;
+    
+}
+
+.b1 {
+    grid-column: 1 / 6;
+    grid-row: 4 / 14;
+}
+
+.b2 {
+    grid-column: -1 / -6;
+    grid-row: 4 / 14;
+}
+
+.c1 {
+    grid-column: 6 / 14;
+    grid-row: 4 / 9;
+}
+
+.c2 {
+    grid-column: -6 / -14;
+    grid-row: 4 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.d1 {
+    grid-column: 6 / 14;
+    grid-row: 9 / 14;
+}
+
+.d2 {
+    grid-column: -6 / -14;
+    grid-row: 9 / 14;
+}
+
+.e1 {
+    grid-column: 1 / 14;
+    grid-row: 14/17
+}
+
+.e2 {
+    grid-column: 1 / 14;
+    grid-row: 14/17
+}
+
+.a1,
+.a2,
+.b1,
+.b2,
+.c1,
+.c2,
+.d1,
+.d2,
+.e1,
+.e2 {
+    background: #004B8F;
+    box-shadow: inset 0 0 0 1px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+.font {
+    font-size: 30px;
+}
+
+table,
+td,
+th {
+    font-size: 16px;
+
+    text-shadow: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.font1 {
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+th {
+    background-color: rgb(78, 160, 187);
+    color: white;
+}
+
+table tr td {
+    background-color: white;
+    color: rgb(78, 160, 187)
+}
+
+table tr:hover td {
+    background-color: blue;
+    color: white;
+}
+
+.c2:hover,
+.a2:hover,
+.e1:hover {
+    background: linear-gradient(180deg, rgba(16, 3, 94, 1) 0%, rgba(121, 241, 249, 1) 100%);
+}
+
+img {
+    width: 99.5%;
+    height: 99.5%;
+    
+    object-fit: fill;
+}
+
+.text {
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.text1 {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+}
+
+.txt1 {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.txt1:hover {
+    opacity: 1;
+}
+
+.ball:hover {
+    filter: opacity(50%);
+}
+
+.d2:hover {
+    background-image: url(c1img.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+    display: flex;
+  
+}
+
+.c1:hover {
+    background-image: url(d2img.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.txt2 {
+    position: absolute;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.op:hover {
+    filter: grayscale(100%);
+}
+
+@media screen and (min-width: 768px) {
+    .body {
+        width: 100%;
+    }
+
+    .font,
+    .text1,
+    .txt2,
+    .font1,
+    .text,
+    .txt1 {
+        font-size: 1.2em;
+    }
+
+    table {
+        width: 78%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .court {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .font,
+    .text1,
+    .txt2,
+    .font1,
+    .text,
+    .txt1 {
+        font-size: 0.9em;
+    }
+
+    .court {
+        border: solid 80px #00933A;
+        width: 100%;
+        height: 60em;
+        margin-top: 0%;
+        position: relative;
+        
+    }
+
+    .table {
+        display: none;
+
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+}
